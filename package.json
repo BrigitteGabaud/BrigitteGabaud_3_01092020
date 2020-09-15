@@ -1,11 +1,28 @@
 {
-  "name": "writting-sass",
+  "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "projet 3 pour openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./main.scss:./style.css"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Brigitte Gabaud",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint-config-recommended": "^3.0.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.7.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrigitteGabaud/Ohmyfood.Brigitte-Gabaud.git"
+  },
+  "keywords": [
+    "Brigit20!"
+  ],
+  "bugs": {
+    "url": "https://github.com/BrigitteGabaud/Ohmyfood.Brigitte-Gabaud/issues"
+  },
+  "homepage": "https://github.com/BrigitteGabaud/Ohmyfood.Brigitte-Gabaud#readme"
 }
