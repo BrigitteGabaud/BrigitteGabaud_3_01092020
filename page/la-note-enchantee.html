@@ -20,6 +20,7 @@
 
 
     <!-- FONTS --> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Devonshire&family=Kalam&display=swap" rel="stylesheet"> 
 
     <!-- ICONS -->
@@ -28,26 +29,28 @@
 </head>
 
 <body>
-    <header id="containeur_title">
+    <header id="container_title">
         <!--Titre-->
         <div id="title">
-            <a href="../index.html"> <!--BOUTON HAUT DE PAGE-->
+            <a href="../index.html"title="Retour Acceuil"> <!--Bouton retour Accueil-->
                 <h1>ohmyfood</h1>
             </a>
         </div>
     </header>
 
-    <main id="containeur_menu1">
-        <h3 id="title_menu1">La note enchantée</h3><br>
+    <main id="container_menu1">
+        
         <div id="note">
             <div id="title_page">
-                <img src="../music_note.png" alt="Note de musique"> <!--ICONE NOTE DE MUSIQUE-->
+                <div class="icon"><!--Icone note de musique-->
+                    <img src="../music_note.png" alt="Note de musique">
+                </div>
                 <h3>La note enchantée</h3>
             </div>
-            <section class=containeur_menu_details> <!--ENTREES-->
+            <section class=containeur_menu_details> <!--Entrées-->
                 <div class="title">
                     <div class="hr">
-                        <h4>Prélude</h4> 
+                        <h4>Prélude</h4>
                     </div>
                 </div>
                 <div class="menu_details">
@@ -68,7 +71,7 @@
                 </div>
             </section>
 
-            <section class=containeur_menu_details><!--PLATS-->
+            <section class=container_menu_details><!--Plats-->
                 <div class="title">
                     <div class="hr">
                         <h4>Point d'orgue</h4>
@@ -88,7 +91,7 @@
                 </div>
             </section>
 
-            <section class=containeur_menu_details><!--DESSERTS-->
+            <section class=container_menu_details><!--Desserts-->
                 <div class="title">
                     <div class="hr">
                         <h4>Mouvement final</h4>
@@ -101,31 +104,28 @@
                     <p>Baba au rhum revisité avec son coulis de citron</p>
                 </div>
                 <div class="menu_details">
-                    <P>tarte au citron meringuée destructurée</P>
+                    <p>tarte au citron meringuée destructurée</p>
                 </div>
             </section>
 
             <section id="bottom_menu">
-                <img src="../music_note.png" alt="Note de musique"><!--ICONE NOTE DE MUSIQUE-->
-                <p style="line-height:65px;">La note enchantée</p>
+                <div class="icon"><!--Icone note de musique-->
+                    <img src="../music_note.png" alt="Note de musique">
+                </div>
+                <p>La note enchantée</p>
             </section>
         </div>
     </main>
 
-    <footer id="containeur_footer">
         <!--FOOTER-->
         <footer id="container_footer">
-            <!-- Legal -->
-            <div class="btn_">
-                <h4> Mentions Légales </h4>
+            <div class="btn shake-bottom"><!-- Legal -->
+                <a href="page/mentions-legales.html"> Mentions légales </a>
             </div >
-    
-            <!-- Contact -->
-            <div class="btn_">
-                <h4> Contactez-nous </h4>
+            <div class="btn shake-bottom"><!-- Contact -->
+                <a href="mailto:contact@ohmyfood.com"> Contactez-nous </a>
             </div >
         </footer>
-
 </body>
 
 </html>
