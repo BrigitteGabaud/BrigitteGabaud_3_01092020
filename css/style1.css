@@ -1,6 +1,12 @@
 /* -------------------- */
-/* ==    SUMMARY        */
+/* ==    SOMMAIRE       */
 /* -------------------- */
+
+/*L11  ELEMENTS PRINCIPAUX    */
+/*L54  HEADER                 */
+/*L68  CONTENEUR PRINCIPAL    */
+/*L180 FOOTER                 */
+/*L201 ANIMATION SHAKE BOTTOM */
 
 /* ------------------------------ */
 /* ==   ELEMENTS PRINCIPEAUX      */
@@ -21,18 +27,29 @@ body {
 a {
   text-decoration: none;
 }
+.menu_details{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 h3{
   text-align:center;
   font-size: 20px;
   font-weight: 200;
+  font-family: 'kalam', 'Courier New', Courier, monospace;
 }
-.hr{
-  display: flex;
-  align-items: center;
+.title h3{ /* --- Soulignement ---*/
+  background: linear-gradient(to top, rgba(246, 145, 106, 1) 0%, rgba(246, 145, 106, 1) 5%, transparent 5.01%) no-repeat left bottom / 0% 100%;
+  transition: background-size .5s;
+}
+.title h3:hover{
+  background-size: 100% 100%;
 }
 p{
   font-size: 13px;
   margin-right: 6px;
+  font-family: 'kalam', 'Courier New', Courier, monospace;
 }
 /* ---------------------- */
 /* ==     HEADER          */
@@ -48,18 +65,17 @@ h1 {
   color: rgba(253, 203, 70, 1);
   font-family: 'Raleway','Courier New', Courier, monospace;
 }
-/*--------------*/
-/* ==  MAIN     */
-/*--------------*/
+/*--------------------------*/
+/* ==  CONTENEUR PRINCIPAL  */
+/*--------------------------*/
 
-#container_menu1 {
+#container_menu1 { /*Conteneur*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   background-color: rgba(252,223,219,1);
-  font-family:'Devonshire', 'Courier New', Courier, monospace;
 }
 #note {
   display: flex;
@@ -69,34 +85,44 @@ h1 {
   padding-top: 25px;
   padding-bottom: 25px; 
 }
-#note h2{
-  font-family:'Devonshire', 'Courier New', Courier, monospace;
-  font-size: 30px;
-  margin-top: 0;
+.icon{ /* Icone */
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;  
 }
-.hr_1{
+.icon img {
+  width: 80px;
+  height: 80px;
+}
+#note h2{
+  font-family: 'Devonshire', 'Courier New', Courier, monospace;
+  font-size: 35px;
+  margin-top: 0;
+  opacity: 0.7;
+}
+.hr_1{ /* Entrées */
   display: flex;
   align-items: center;
 }
-.hr_1::before{
+.hr_1::before{ /* --- Traits titre --- */
   border-top: black 2px solid;
   content: "";
   flex: 1;
-  margin-left: 1%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 } 
 .hr_1::after{
   border-top: black 2px solid;
   content: "";
   flex: 1;
-  margin-left: 12%;
+  margin-left: 10%;
   margin-right: 10%;
 }
-.hr_2{
+.hr_2{ /* Plats */
   display: flex;
   align-items: center;
 }
-.hr_2::before{
+.hr_2::before{ /* --- Traits titre --- */
   border-top: black 2px solid;
   content: "";
   flex: 1;
@@ -110,11 +136,11 @@ h1 {
   margin-left: 5%;
   margin-right: 10%;
 }
-.hr_3{
+.hr_3{ /* Desserts*/
   display: flex;
   align-items: center;
 }
-.hr_3::before{
+.hr_3::before{ /* --- Traits titre --- */
   border-top: black 2px solid;
   content: "";
   flex: 1;
@@ -128,32 +154,28 @@ h1 {
   margin-left: 3%;
   margin-right: 10%;
 }
-.icon{
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-    
-}
-.menu_details{
-  display: flex;
-  justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-#bottom_menu{
+#bottom_menu{ /* Titre du bas */
   display: flex;
   flex-direction: row;
 }
-#bottom_menu .icon{
-  width: 30px;
-  height: 30px;
-}
+
 #bottom_menu p{
   font-family:'Devonshire', 'Courier New', Courier, monospace;
   font-size: 20px;
-  margin-top: 25px;
+  margin-top: 33px;
   margin-left: 10px;
 }
+
+.icon_2{ /* Icone */
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;  
+}
+img{
+  width: 50px;
+  height: 50px;
+}
+
 
 /*--------------*/
 /* ==  FOOTER   */
@@ -173,12 +195,12 @@ footer a{
     color:rgba(253, 203, 70, 1);
     margin:5px auto;
     font-family: 'Raleway','Courier New', Courier, monospace;
-    font-weight:400;
+    font-weight:600;
     font-size: 13px;
 }
-/* ------------------------
- * animation shake-bottom
- * ------------------------*/
+/* -----------------------------*/
+/*  == ANIMATION SHAKE BOTTOM   */
+/* -----------------------------*/
  .shake-bottom:hover{
 	-webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
