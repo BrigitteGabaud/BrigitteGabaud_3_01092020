@@ -2,11 +2,12 @@
 /* ==    SUMMARY        */
 /* -------------------- */
 
-/*L11  ELEMENTS PRINCIPAUX    */
-/*L66  HEADER                 */
-/*L679 CONTENEUR PRINCIPAL    */
-/*L79  FOOTER                 */
-/*L293 ANIMATION SHAKE BOTTOM */
+/*L12   ELEMENTS PRINCIPAUX    */
+/*L67   HEADER                 */
+/*L80   CONTENEUR PRINCIPAL    */
+/*L394  FOOTER                 */
+/*L414  ANIMATION SHAKE BOTTOM */
+/*L487  MEDIA QUERIES          */
 
 /* ------------------------------ */
 /* ==   ELEMENTS PRINCIPEAUX      */
@@ -33,7 +34,7 @@ h2 {
     rgba(158, 222, 120, 1) 50%,
     rgba(191, 255, 126, 1) 100%
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h3 {
@@ -482,5 +483,40 @@ footer a {
   90% {
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg);
+  }
+}
+/*---------------------*/
+/* == MEDIA QUERIES    */
+/*_____________________*/
+
+/*--- Medium sreen /Landscape /Desktop / Large screen ---*/
+
+@media all and (min-width: 769px) {
+  #taste {
+    min-width: 320px;
+    max-width: 1100px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+  #taste h2 {
+    font-size: 45px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  footer a {
+    font-size: 20px;
+  }
+  .container_menu_details {
+    max-width: 1100px;
+    margin-bottom: 50px;
+    width: 100%;
   }
 }
