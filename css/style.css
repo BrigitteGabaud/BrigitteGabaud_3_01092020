@@ -151,13 +151,15 @@ header {
     rgba(144, 91, 253, 1) 100%
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 #french span {
   font-family: "Abril Fatface", "Times New Roman", Times, serif;
   background: rgba(199, 116, 18, 1);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
   margin-top: 5px;
 }
 #french:hover {
@@ -208,7 +210,8 @@ header {
     rgba(11, 123, 246, 1) 100%
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 #delight span {
   font-family: "Kalam", "Times New Roman", Times, serif;
@@ -259,7 +262,8 @@ header {
     rgba(191, 255, 126, 1) 100%
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 #taste span {
   font-family: "Kalam", "Times New Roman", Times, serif;

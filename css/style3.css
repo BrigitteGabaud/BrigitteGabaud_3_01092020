@@ -36,7 +36,8 @@ h2 {
     rgba(11, 123, 246, 1) 100%
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
   padding-left: 2px;
 }
 h3 {
