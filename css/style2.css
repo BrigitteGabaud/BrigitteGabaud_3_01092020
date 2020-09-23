@@ -6,7 +6,7 @@
 /*L60  HEADER                 */
 /*L72  CONTENEUR PRINCIPAL    */
 /*L260 FOOTER                 */
-/*L280 ANIMATION SHAKE BOTTOM */
+/*L216 ANIMATION SHAKE BOTTOM */
 /*L354 MEDIA QUERIES          */
 
 /* ------------------------------ */
@@ -36,9 +36,10 @@ h2 {
     rgba(214, 176, 212, 1) 50%,
     rgba(144, 91, 253, 1) 100%
   );
-  background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 2px;
 }
 .container_menu_details {
   display: flex;
