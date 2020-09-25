@@ -169,18 +169,18 @@ footer a {
 /* == MEDIA QUERIES    */
 /*_____________________*/
 
-/*--- Medium sreen /Landscape /Desktop / Large screen ---*/
+/*--- Medium sreen /Landscape /Desktop ---*/
 
 @media all and (min-width: 769px) {
   h1 {
-    font-size: 75px;
+    font-size: 55px;
   }
 
   h2,
   h3 {
     display: flex;
     justify-content: left;
-    font-size: 35px;
+    font-size: 25px;
   }
   p {
     display: flex;
@@ -190,11 +190,14 @@ footer a {
     min-width: 320px;
     max-width: 1280px;
     width: 100%;
-    font-size: 30px;
+    font-size: 20px;
     text-align: justify;
     margin: 15px 0;
   }
   footer a {
-    font-size: 30px;
+    font-size: 20px;
   }
+}
+/* --- Large screen ---*/
+@media all and (min-width: 2560px) {
 }
