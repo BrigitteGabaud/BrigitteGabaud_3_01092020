@@ -3,8 +3,8 @@
 /* -------------------- */
 
 /*L12  ELEMENTS PRINCIPAUX    */
-/*L61  HEADER                 */
-/*L75  CONTENEUR PRINCIPAL    */
+/*L56  HEADER                 */
+/*L71  CONTENEUR PRINCIPAL    */
 /*L195 FOOTER                 */
 /*L215 ANIMATION SHAKE BOTTOM */
 /*L289 MEDIA QUERIES          */
@@ -12,11 +12,6 @@
 /* ------------------------------ */
 /* ==   ELEMENTS PRINCIPEAUX      */
 /* ------------------------------ */
-
-html {
-  height: auto;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -39,8 +34,8 @@ h3 {
   font-weight: 200;
   font-family: "kalam", "Courier New", Courier, monospace;
 }
+/* --- Soulignement ---*/
 .title h3 {
-  /* --- Soulignement ---*/
   background: linear-gradient(
       to top,
       rgba(246, 145, 106, 1) 0%,
@@ -71,19 +66,26 @@ header {
 h1 {
   color: rgba(253, 203, 70, 1);
   font-family: "Raleway", "Courier New", Courier, monospace;
+  font-size: 45px;
 }
 /*--------------------------*/
 /* ==  CONTENEUR PRINCIPAL  */
 /*--------------------------*/
 
+/* ---Conteneur ---*/
 #container_menu1 {
-  /*Conteneur*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 30px 0 80px 0;
+}
+#menu1 {
   background-color: rgba(252, 223, 219, 1);
+  box-shadow: 5px 5px 5px #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #note {
   display: flex;
@@ -93,8 +95,8 @@ h1 {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+/* --- Icone --- */
 .icon {
-  /* Icone */
   display: flex;
   justify-content: center;
   margin-top: 13px;
@@ -109,13 +111,13 @@ h1 {
   margin-top: 0;
   opacity: 0.7;
 }
+/* Entrées */
 .hr_1 {
-  /* Entrées */
   display: flex;
   align-items: center;
 }
+/* --- Traits titre --- */
 .hr_1::before {
-  /* --- Traits titre --- */
   border-top: black 2px solid;
   content: "";
   flex: 1;
@@ -129,13 +131,13 @@ h1 {
   margin-left: 10%;
   margin-right: 10%;
 }
+/* Plats */
 .hr_2 {
-  /* Plats */
   display: flex;
   align-items: center;
 }
+/* --- Traits titre --- */
 .hr_2::before {
-  /* --- Traits titre --- */
   border-top: black 2px solid;
   content: "";
   flex: 1;
@@ -149,13 +151,13 @@ h1 {
   margin-left: 5%;
   margin-right: 10%;
 }
+/* Desserts*/
 .hr_3 {
-  /* Desserts*/
   display: flex;
   align-items: center;
 }
+/* --- Traits titre --- */
 .hr_3::before {
-  /* --- Traits titre --- */
   border-top: black 2px solid;
   content: "";
   flex: 1;
@@ -169,21 +171,19 @@ h1 {
   margin-left: 3%;
   margin-right: 10%;
 }
+/*--- Titre du bas ---*/
 #bottom_menu {
-  /* Titre du bas */
   display: flex;
   flex-direction: row;
 }
-
 #bottom_menu p {
   font-family: "Devonshire", "Courier New", Courier, monospace;
   font-size: 20px;
   margin-top: 33px;
   margin-left: 10px;
 }
-
+/*--- Icone du bas --- */
 .icon_2 {
-  /* Icone */
   display: flex;
   justify-content: center;
   margin-top: 13px;
@@ -290,31 +290,59 @@ footer a {
 /* == MEDIA QUERIES    */
 /*_____________________*/
 
-/*--- Medium sreen /Landscape /Desktop / Large screen ---*/
-
-@media all and (min-width: 769px) {
+/*--- Medium sreen ---*/
+@media all and (min-width: 320px) and (max-width: 468px) {
+  h2 {
+    font-size: 25px;
+  }
+  #menu1 {
+    width: 90%;
+    margin-left: 1%;
+  }
+}
+/*--- Tablet ---*/
+@media all and (min-width: 468px) and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  #menu1 {
+    width: 90%;
+    margin-left: 1%;
+  }
+}
+/*--- Medium sreen /Landscape /Desktop ---*/
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: 55px;
+  }
   #note {
     min-width: 320px;
     max-width: 1280px;
     width: 100%;
   }
-
-  h1 {
-    font-size: 50px;
-  }
   #note h2 {
     font-size: 45px;
+    margin-bottom: 50px;
+  }
+  .icon img {
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+  }
+  #menu1 {
+    width: 70%;
+    margin-left: 1%;
+  }
+  .container_menu_details {
+    max-width: 1100px;
+    margin-bottom: 50px;
+    width: 100%;
   }
   h3 {
     font-size: 30px;
   }
   p {
     font-size: 20px;
-  }
-  .container_menu_details {
-    max-width: 1100px;
-    margin-bottom: 50px;
-    width: 100%;
   }
   #bottom_menu {
     margin-top: 20px;
@@ -325,5 +353,56 @@ footer a {
   }
   footer a {
     font-size: 20px;
+  }
+}
+/* --- Large screens ---*/
+
+@media all and (min-width: 2560px) {
+  h1 {
+    font-size: 75px;
+  }
+  #note {
+    min-width: 320px;
+    max-width: none;
+    width: 100%;
+  }
+  #note h2 {
+    font-size: 65px;
+    margin-bottom: 50px;
+  }
+  .icon img {
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+  }
+  #menu1 {
+    width: 70%;
+    margin-left: 1%;
+  }
+  .container_menu_details {
+    max-width: 2000px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 35px;
+  }
+  #bottom_menu {
+    margin-top: 40px;
+  }
+  #bottom_menu p {
+    font-size: 50px;
+    margin-top: 25px;
+    margin-left: 15px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  footer a {
+    font-size: 30px;
   }
 }

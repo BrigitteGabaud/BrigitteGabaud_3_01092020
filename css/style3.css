@@ -3,19 +3,15 @@
 /* -------------------- */
 
 /*L12  ELEMENTS PRINCIPAUX    */
-/*L54  HEADER                 */
-/*L67  CONTENEUR PRINCIPAL    */
-/*L244 FOOTER                 */
-/*L264 ANIMATION SHAKE BOTTOM */
-/*L338 MEDIA QUERIES          */
+/*L62  HEADER                 */
+/*L75  CONTENEUR PRINCIPAL    */
+/*L256 FOOTER                 */
+/*L276 ANIMATION SHAKE BOTTOM */
+/*L350 MEDIA QUERIES          */
 
 /* ------------------------------ */
 /* ==   ELEMENTS PRINCIPEAUX      */
 /* ------------------------------ */
-
-html {
-  height: auto;
-}
 body {
   display: flex;
   flex-direction: column;
@@ -39,6 +35,17 @@ h2 {
   -webkit-background-clip: text;
   color: transparent;
   padding-left: 2px;
+}
+.container_menu_details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container_menu_details_3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 80px;
 }
 h3 {
   text-align: center;
@@ -68,15 +75,20 @@ h1 {
 /*-----------------------------*/
 /* ==  CONTENEUR PRINCIPAL     */
 /*-----------------------------*/
-
+/* conteneur */
 #container_menu3 {
-  /* conteneur */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 30px 0 80px 0;
+}
+#menu3 {
   background-color: rgba(249, 249, 249, 1);
+  box-shadow: 5px 5px 5px #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #delight {
   display: flex;
@@ -91,13 +103,13 @@ h1 {
   flex-direction: column;
   width: 100%;
 }
+/* Entrées */
 .hr_1 {
-  /* Entrées */
   display: flex;
   align-items: center;
 }
+/* --- Soulignement ---*/
 .hr_1 h3 {
-  /* --- Soulignement ---*/
   background: linear-gradient(
       to top,
       rgba(14, 50, 222, 1) 0%,
@@ -110,9 +122,8 @@ h1 {
 .hr_1 h3:hover {
   background-size: 100% 100%;
 }
-
+/* --- Traits titre --- */
 .hr_1::before {
-  /* --- Traits titre --- */
   height: 2px;
   background-image: linear-gradient(
     to left,
@@ -142,13 +153,13 @@ h1 {
   margin-left: 10%;
   margin-right: 10%;
 }
+/* Plats */
 .hr_2 {
-  /* Plats */
   display: flex;
   align-items: center;
 }
+/* --- Soulignement ---*/
 .hr_2 h3 {
-  /* --- Soulignement ---*/
   background: linear-gradient(
       to top,
       rgba(60, 142, 242, 1) 0%,
@@ -161,8 +172,8 @@ h1 {
 .hr_2 h3:hover {
   background-size: 100% 100%;
 }
+/* --- Traits titre --- */
 .hr_2::before {
-  /* --- Traits titre --- */
   height: 2px;
   background-image: linear-gradient(
     to left,
@@ -192,13 +203,13 @@ h1 {
   margin-left: 10%;
   margin-right: 10%;
 }
+/* Desserts */
 .hr_3 {
-  /* Desserts */
   display: flex;
   align-items: center;
 }
+/* --- Soulignement ---*/
 .hr_3 h3 {
-  /* --- Soulignement ---*/
   background: linear-gradient(
       to top,
       rgba(68, 171, 248, 1) 0%,
@@ -211,8 +222,8 @@ h1 {
 .hr_3 h3:hover {
   background-size: 100% 100%;
 }
+/* --- Traits titre --- */
 .hr_3::before {
-  /* --- Traits titre --- */
   height: 2px;
   background-image: linear-gradient(
     to left,
@@ -340,21 +351,52 @@ footer a {
 /* == MEDIA QUERIES    */
 /*_____________________*/
 
-/*--- Medium sreen /Landscape /Desktop / Large screen ---*/
-
-@media all and (min-width: 769px) {
+/*--- Medium sreen ---*/
+@media all and (min-width: 320px) and (max-width: 468px) {
+  h2 {
+    font-size: 25px;
+  }
+  #menu3 {
+    width: 90%;
+    margin-left: 1%;
+  }
+}
+/*--- Tablet ---*/
+@media all and (min-width: 468px) and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  #menu3 {
+    width: 90%;
+    margin-left: 1%;
+  }
+}
+/*--- Landscape /Desktop / Large screen ---*/
+@media all and (min-width: 768px) {
   #delight {
     min-width: 320px;
     max-width: 1100px;
     width: 100%;
   }
-
   h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
   #delight h2 {
     font-size: 45px;
     padding-left: 4px;
+    margin: 100px 0 50px 0;
+  }
+  #menu3 {
+    width: 70%;
+    margin-left: 1%;
+  }
+  .container_menu_details {
+    max-width: 1100px;
+    margin-bottom: 50px;
+  }
+  .container_menu_details_3 {
+    max-width: 1100px;
+    margin-bottom: 50px;
   }
   h3 {
     font-size: 30px;
@@ -366,9 +408,48 @@ footer a {
   footer a {
     font-size: 20px;
   }
+}
+/* --- Large screens ---*/
+@media all and (min-width: 2560px) {
+  h1 {
+    font-size: 75px;
+  }
+  #delight {
+    min-width: 320px;
+    max-width: none;
+    width: 100%;
+  }
+  #delight h2 {
+    font-size: 65px;
+    margin-bottom: 50px;
+    padding-left: 7px;
+  }
+  .icon img {
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+  }
+  #menu3 {
+    width: 70%;
+    margin-left: 1%;
+  }
   .container_menu_details {
-    max-width: 1100px;
+    max-width: 2000px;
     margin-bottom: 50px;
     width: 100%;
+  }
+  .container_menu_details_3 {
+    max-width: 2000px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 35px;
+  }
+  footer a {
+    font-size: 30px;
   }
 }

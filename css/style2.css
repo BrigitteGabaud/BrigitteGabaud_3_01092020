@@ -3,19 +3,16 @@
 /* -------------------- */
 
 /*L12  ELEMENTS PRINCIPAUX    */
-/*L60  HEADER                 */
-/*L72  CONTENEUR PRINCIPAL    */
-/*L260 FOOTER                 */
-/*L216 ANIMATION SHAKE BOTTOM */
-/*L354 MEDIA QUERIES          */
+/*L64  HEADER                 */
+/*L77  CONTENEUR PRINCIPAL    */
+/*L271 FOOTER                 */
+/*L291 ANIMATION SHAKE BOTTOM */
+/*L365 MEDIA QUERIES          */
 
 /* ------------------------------ */
 /* ==   ELEMENTS PRINCIPEAUX      */
 /* ------------------------------ */
 
-html {
-  height: auto;
-}
 body {
   display: flex;
   flex-direction: column;
@@ -29,7 +26,7 @@ a {
 h2 {
   text-align: center;
   font-family: "Croissant One", "Times New Roman", Times, serif;
-  font-size: 25px;
+  font-size: 35px;
   background: linear-gradient(
     90deg,
     rgba(216, 133, 46, 1) 0%,
@@ -46,6 +43,12 @@ h2 {
   flex-direction: column;
   width: 100%;
 }
+.container_menu_details_3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 25px;
+}
 h3 {
   text-align: center;
   font-size: 17px;
@@ -53,7 +56,7 @@ h3 {
   font-family: "Playfair Display", serif;
 }
 p {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 100;
   margin-right: 6px;
   font-family: "Playfair Display", serif;
@@ -69,18 +72,25 @@ header {
 h1 {
   color: rgba(253, 203, 70, 1);
   font-family: "Raleway", "Courier New", Courier, monospace;
+  font-size: 45px;
 }
-/*--------------*/
-/* ==  MAIN     */
-/*--------------*/
+/*--------------------------*/
+/* ==  CONTENEUR PRINCIPAL  */
+/*--------------------------*/
+/* Conteneur */
 #container_menu2 {
-  /* Conteneur */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 30px 0 80px 0;
+}
+#menu2 {
   background-color: rgba(255, 245, 254, 1);
+  box-shadow: 5px 5px 5px #a8a8a8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #french {
   display: flex;
@@ -88,16 +98,16 @@ h1 {
   align-items: center;
   height: auto;
   padding-top: 25px;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
 }
+/* Entrées */
 .hr_1 {
-  /* Entrées */
   display: flex;
   align-items: center;
   color: rgba(198, 116, 18, 1);
 }
+/* --- Soulignement 1 ---*/
 .hr_1 h3 {
-  /* --- Soulignement 1 ---*/
   background: linear-gradient(
       to top,
       rgba(198, 116, 18, 1) 0%,
@@ -110,8 +120,8 @@ h1 {
 .hr_1 h3:hover {
   background-size: 100% 100%;
 }
+/* --- Traits titre --- */
 .hr_1::before {
-  /* --- Traits titre --- */
   height: 2px;
   background-image: linear-gradient(
     to right,
@@ -146,14 +156,14 @@ h1 {
 .menu_details_1 p {
   color: rgba(198, 116, 18, 1);
 }
+/* PLats */
 .hr_2 {
-  /* PLats */
   display: flex;
   align-items: center;
   color: rgba(165, 103, 153, 1);
 }
+/* --- Soulignement 2 ---*/
 .hr_2 h3 {
-  /* --- Soulignement 2 ---*/
   background: linear-gradient(
       to top,
       rgba(165, 103, 153, 1) 0%,
@@ -166,8 +176,8 @@ h1 {
 .hr_2 h3:hover {
   background-size: 100% 100%;
 }
+/* --- Traits titre --- */
 .hr_2::before {
-  /* --- Traits titre --- */
   height: 2px;
   background-image: linear-gradient(
     to right,
@@ -202,14 +212,14 @@ h1 {
 .menu_details_2 p {
   color: rgba(165, 103, 153, 1);
 }
+/* Desserts */
 .hr_3 {
-  /* Desserts */
   display: flex;
   align-items: center;
   color: rgba(110, 76, 204, 1);
 }
+/* --- Soulignement 3 ---*/
 .hr_3 h3 {
-  /* --- Soulignement 3 ---*/
   background: linear-gradient(
       to top,
       rgba(110, 76, 204, 1) 0%,
@@ -222,8 +232,8 @@ h1 {
 .hr_3 h3:hover {
   background-size: 100% 100%;
 }
+/* --- Traits titre --- */
 .hr_3::before {
-  /* --- Traits titre --- */
   height: 2px;
   background-image: linear-gradient(
     to right,
@@ -356,21 +366,51 @@ footer a {
 /* == MEDIA QUERIES    */
 /*_____________________*/
 
-/*--- Medium sreen /Landscape /Desktop / Large screen ---*/
-
-@media all and (min-width: 769px) {
+/*--- Medium sreen ---*/
+@media all and (min-width: 320px) and (max-width: 468px) {
+  h2 {
+    font-size: 23px;
+  }
+  #menu2 {
+    width: 90%;
+    margin-left: 1%;
+  }
+}
+/*--- Tablet ---*/
+@media all and (min-width: 468px) and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  #menu2 {
+    width: 95%;
+    margin-left: 1%;
+  }
+}
+/*--- Landscape /Desktop ---*/
+@media all and (min-width: 768px) {
   #french {
     min-width: 320px;
     max-width: 1100px;
     width: 100%;
-    height: 100%;
   }
-
   h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
   #french h2 {
     font-size: 45px;
+    margin: 100px 0 50px 0;
+  }
+  #menu2 {
+    width: 70%;
+    margin-left: 1%;
+  }
+  .container_menu_details {
+    max-width: 1100px;
+    margin-bottom: 50px;
+  }
+  .container_menu_details_3 {
+    max-width: 1100px;
+    margin-bottom: 50px;
   }
   h3 {
     font-size: 30px;
@@ -378,12 +418,50 @@ footer a {
   p {
     font-size: 20px;
   }
-
   footer a {
     font-size: 20px;
   }
-  .container_menu_details {
-    max-width: 1100px;
+}
+/* --- Large screens ---*/
+@media all and (min-width: 2560px) {
+  h1 {
+    font-size: 75px;
+  }
+  #french {
+    min-width: 320px;
+    max-width: none;
+    width: 100%;
+  }
+  #french h2 {
+    font-size: 65px;
     margin-bottom: 50px;
+  }
+  .icon img {
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+  }
+  #menu2 {
+    width: 70%;
+    margin-left: 1%;
+  }
+  .container_menu_details {
+    max-width: 2000px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .container_menu_details_3 {
+    max-width: 2000px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 35px;
+  }
+  footer a {
+    font-size: 30px;
   }
 }
