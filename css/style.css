@@ -106,8 +106,8 @@ header {
 }
 #note:hover {
   opacity: 0.5;
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 #icon {
   display: flex;
@@ -497,7 +497,6 @@ footer a {
     margin: 0 25px 0 25px;
   }
   #note a,
-  #french h2,
   #delight h2,
   #taste h2 {
     font-size: 18px;
@@ -505,6 +504,7 @@ footer a {
     margin: 0%;
   }
   #french h2 {
+    font-size: 13px;
     text-align: center;
   }
   #french span {
@@ -545,13 +545,13 @@ footer a {
     margin: 0 25px 0 25px;
   }
   #note a,
-  #french h2,
   #delight h2,
   #taste h2 {
     font-size: 27px;
     margin: 0;
   }
   #french h2 {
+    font-size: 20px;
     text-align: center;
   }
   #french span {
