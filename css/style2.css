@@ -33,9 +33,9 @@ h2 {
     rgba(214, 176, 212, 1) 50%,
     rgba(144, 91, 253, 1) 100%
   );
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
   padding-left: 2px;
 }
 .container_menu_details {
@@ -401,7 +401,7 @@ footer a {
     margin: 100px 0 50px 0;
   }
   #menu2 {
-    width: 70%;
+    width: 90%;
     margin-left: 1%;
   }
   .container_menu_details {
